@@ -1,19 +1,22 @@
 #include <stdio.h>
 
 /**
- * main - void fun
- * Description: print num and alph
- * Return: return zero
+ * main- Entry point
+ * @void: Null value
+ *
+ * Description: Print numbers of base 16
+ * Return: Zero value
  */
-int main(void) 
+
+int main(void)
 {
+	char c;
 	int n;
-	char a;
 
 	for (n = '0'; n <= '9'; n++)
 		putchar(n);
-	for (a = 'a'; a <= 'f'; a++)
-		putchar(a);
+	for (c = 'a'; c <= 'f'; c++)
+		putchar(c);
 	putchar('\n');
 	return (0);
 }

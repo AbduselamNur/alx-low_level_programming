@@ -5,7 +5,6 @@
  * Description: print num and alph
  * Return: return zero
  */
-
 int main(void) 
 {
 	int n;

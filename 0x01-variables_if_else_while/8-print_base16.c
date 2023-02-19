@@ -1,13 +1,9 @@
-
 #include <stdio.h>
 
 /**
  * main - void fun
- *
  * Description: print num and alph
- *
  * Return: return zero
- *
  */
 
 int main(void) 

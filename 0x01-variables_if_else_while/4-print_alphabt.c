@@ -2,21 +2,22 @@
 #include <stdio.h>
 
 /**
- * main - print alphabate
+ * main- Entry point
+ * @void: Null value
  *
- * Description: print alphabate exapt e and q
- * Return: return zero
+ * Description: Print alphabet lowercase
+ * Return: Zero value
  */
 
-int main(void) 
+int main(void)
 {
-	char x;
+	char c;
 
-	for (x = 'a'; x <= 'z'; x++)
+	for (c = 'a'; c <= 'z'; c++)
 	{
-		if (x == 'e' || x == 'q')
+		if (c == 'q' || c == 'e')
 			continue;
-		putchar(x);
+		putchar(c);
 	}
 	putchar('\n');
 	return (0);

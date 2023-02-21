@@ -2,7 +2,7 @@
 
 /*
  * main - void function
- *
+ * Description: print _putchar
  * Return: return zaro
  *
  */

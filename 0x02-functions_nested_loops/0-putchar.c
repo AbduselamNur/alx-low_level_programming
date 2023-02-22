@@ -1,14 +1,13 @@
 #include "main.h"
 
-/*
+/**
  * main - check the code
- * description: display content
  * Return: return zaro
- *
  */
 
 int main(void)
 {
+
 	_putchar('_');
 	_putchar('p');
 	_putchar('u');

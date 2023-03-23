@@ -1,48 +1,36 @@
 #include "3-calc.h"
-#include <stdlib.h>
-#include <string.h>
-
 /**
-<<<<<<< HEAD
- * get_op_func - ...
- * @s: ...
+ * get_op_func - function that selects the correct function to perform the
+ *               operation asked by the user.
  *
- * Return: ...
+ * @s: This is the input operator
+ *
+ * Return: This function returns a pointer to the function that corresponds to
+ *         the operator given as a parameter. Example: get_op_func("+")
+ *         should return a pointer to the function op_add"")
+ *         If s does not match any of the 5 expected operators
+ *         (+, -, *, /, %),return NULL)
+ *
  */
-=======
-  * get_op_func - ...
-  * @s: ...
-  *
-  * Return: ...
-  */
->>>>>>> 27b4117ba9e8f5489dde71fcc3fe32e3019c6dfa
-int (*get_op_func(char *s))(int, int)
+int (*get_op_func(char *s))(int a, int b)
 {
 	op_t ops[] = {
-	{ "+", op_add },
-	{ "-", op_sub },
-	{ "*", op_mul },
-<<<<<<< HEAD
-	{ "/", op_div }
-=======
-	{ "/", op_div },
->>>>>>> 27b4117ba9e8f5489dde71fcc3fe32e3019c6dfa
-	{ "%", op_mod },
-	{ NULL, NULL }
+		{"+", op_add},
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod},
+		{NULL, NULL}
 	};
 	int i = 0;
 
-	while (i < 5)
+	while (ops[i].op != NULL)
 	{
-		if (strcmp(s, ops[i].op) == 0)
+		if (*ops[i].op == *s)
+		{
 			return (ops[i].f);
-<<<<<<< HEAD
-		
-=======
-
->>>>>>> 27b4117ba9e8f5489dde71fcc3fe32e3019c6dfa
+		}
 		i++;
 	}
-
-	return (0);
+	return (NULL);
 }

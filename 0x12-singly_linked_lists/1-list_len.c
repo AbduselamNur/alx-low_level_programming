@@ -1,3 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "ls
+#include "lists.h"
+
+/**
+ * list_len - calculte the number of elements in a linked list.
+ * @h: head of the liked list.
+ *
+ * Return: number of elements in the linked list.
+ **/
+
+size_t list_len(const list_t *h)
+{
+	size x = 0;
+
+	while (h != NULL)
+	{
+		x++;
+		h = h->next;
+	}
+	return (x);
+}

@@ -8,9 +8,8 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	FILE *fp;
+	FILE *fp = fopen("filename", "w");
 
-	fp = fopen("filename", "w");
 	if (filename == NULL)
 		return (-1);
 	if (text_content == NULL)
